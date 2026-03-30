@@ -1,0 +1,140 @@
+{
+    "Blattformate und Linien": [
+        {
+            "q": "Was ist auf diesem Bild zu sehen?",
+            "a": "Eine Vorderansicht im Längsschnitt.",
+            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
+            "i": "Media/ctz/bild1.png"
+        },
+        {
+            "q": "Was ist auf diesem Bild zu sehen?",
+            "a": "Eine Vorderansicht im Längsschnitt.",
+            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
+            "i": "Media/ctz/bild1.png"
+        },
+        {
+            "q": "Was ist auf diesem Bild zu sehen?",
+            "a": "Eine Vorderansicht im Längsschnitt.",
+            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
+            "i": [
+                "Media/ctz/bild1.png",
+                "Media/ctz/Kontingent.png"
+            ]
+        },
+        {
+            "q": "Was ist auf diesem Bild zu sehen?",
+            "a": "Eine Vorderansicht im Längsschnitt.",
+            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
+            "i": [
+                "Media/ctz/bild1.png",
+                "Media/ctz/browser.png",
+                "Media/ctz/Kontingent.png"
+            ]
+        },
+        {
+            "q": "Welches Seitenverhältnis haben alle normierten DIN-Blattformate?",
+            "a": "1 zu Wurzel aus 2 (ca. 1 : 1,414).",
+            "e": "Dadurch bleibt beim Halbieren des Blattes das Seitenverhältnis immer gleich."
+        },
+        {
+            "q": "Wie groß ist die Fläche eines DIN A0 Bogens?",
+            "a": "Exakt 1 Quadratmeter (m²).",
+            "e": "Die Maße sind 841 mm x 1189 mm."
+        },
+        {
+            "q": "Wie viele mm beträgt die Breite und Höhe eines DIN A4 Bogens?",
+            "a": "A4 misst 210 x 297 mm",
+            "e": "A3 misst das doppelte - also 297 x 420."
+        },
+        {
+            "q": "Wofür wird die 'breite Volllinie' in einer technischen Zeichnung verwendet?",
+            "a": "Für sichtbare Kanten und sichtbare Umrisse.",
+            "e": "Sie ist die wichtigste Linie zur Darstellung der Geometrie."
+        },
+        {
+            "q": "Welche Bedeutung hat eine schmale Strichpunktlinie?",
+            "a": "Sie kennzeichnet Mittellinien, Symmetrieachsen oder Teilkreise.",
+            "e": "Strichpunktlinien sollten immer etwas über die Körperkante hinausragen."
+        }
+    ],
+    "Maßstäbe": [
+        {
+            "q": "Was bedeutet der Maßstab 1:5?",
+            "a": "Verkleinerungsmaßstab (Die Zeichnung ist 5-mal kleiner als die Wirklichkeit).",
+            "e": "Ein 50 mm langes Teil wird in der Zeichnung 10 mm lang dargestellt."
+        },
+        {
+            "q": "Welches Maß wird in die Maßzahl geschrieben, wenn im Maßstab 2:1 gezeichnet wird?",
+            "a": "Immer das Originalmaß (Wirklichkeitsmaß).",
+            "e": "Unabhängig vom Maßstab wird in der Zeichnung immer die reale Größe eingetragen. We"
+        }
+    ],
+    "Bemassungsgrundlagen": [
+        {
+            "q": "In welcher Einheit werden Maße im Maschinenbau standardmäßig angegeben?",
+            "a": "In Millimeter (mm).",
+            "e": "Die Einheit 'mm' wird hinter der Maßzahl nicht extra hingeschrieben."
+        },
+        {
+            "q": "Wie groß sollte der Abstand der ersten Maßlinie zur Körperkante mindestens sein?",
+            "a": "Mindestens 10 mm.",
+            "e": "Zwischen parallelen Maßlinien sollte der Abstand mindestens 7 mm betragen."
+        },
+        {
+            "q": "Was ist der Unterschied zwischen Funktionsmaßen und Prüfmaßen?",
+            "a": "Funktionsmaße sind für die Arbeit des Teils wichtig, Prüfmaße dienen der Kontrolle.",
+            "e": "Prüfmaße erkennt man oft an einem Rahmen mit abgerundeten Ecken."
+        }
+    ],
+    "Projektionen (Normalprojektion)": [
+        {
+            "q": "Wie heißen die drei Standardansichten in der Projektionsmethode 1?",
+            "a": "Vorderansicht, Draufsicht, Seitenansicht von links.",
+            "e": "Die Seitenansicht von links wird rechts neben der Vorderansicht gezeichnet."
+        },
+        {
+            "q": "Was versteht man unter 'Fluchten' in der technischen Zeichnung?",
+            "a": "Dass die Maße der Ansichten waagerecht und senkrecht genau übereinstimmen.",
+            "e": "Punkte der Vorderansicht liegen auf einer Linie mit Punkten der Draufsicht."
+        }
+    ],
+    "Schnittdarstellungen": [
+        {
+            "q": "Wie werden Schnittflächen in einer technischen Zeichnung gekennzeichnet?",
+            "a": "Durch eine schmale Volllinie als Schraffur (meist im 45°-Winkel).",
+            "e": "Bei Zusammenbauzeichnungen werden benachbarte Teile unterschiedlich schraffiert."
+        },
+        {
+            "q": "Welche Teile werden im Längsschnitt grundsätzlich NICHT geschnitten dargestellt?",
+            "a": "Wellen, Bolzen, Schrauben, Muttern, Stifte und Rippen.",
+            "e": "Diese Teile werden 'voll' gelassen, um die Zeichnung übersichtlicher zu machen."
+        },
+        {
+            "q": "Was kennzeichnet die Schnittverlaufslinie?",
+            "a": "Eine breite Strichpunktlinie mit zwei Pfeilen für die Blickrichtung.",
+            "e": "Zusätzlich wird der Schnitt mit Großbuchstaben benannt (z. B. A - A)."
+        }
+    ],
+    "Gewindedarstellung": [
+        {
+            "q": "Wie wird der Außendurchmesser einer Schraube (Bolzengewinde) dargestellt?",
+            "a": "Mit einer breiten Volllinie.",
+            "e": "Der Kerndurchmesser wird hingegen als schmale Volllinie gezeichnet."
+        },
+        {
+            "q": "Wie stellt man ein Innengewinde in der Seitenansicht (Kreisdarstellung) dar?",
+            "a": "Außenkreis als schmale Volllinie (3/4 Kreis), Innenkreis als breite Volllinie.",
+            "e": "Der 3/4 Kreis zeigt den Nenndurchmesser des Gewindes."
+        },
+        {
+            "q": "Bis wohin wird die Schraffur bei einer Gewindebohrung (Schnitt) gezeichnet?",
+            "a": "Bis zur breiten Volllinie (Innendurchmesser).",
+            "e": "Die Schraffur 'schneidet' die schmale Linie des Außendurchmessers."
+        },
+        {
+            "q": "Was bedeutet die Abkürzung 'M12 x 1,5'?",
+            "a": "Metrisches ISO-Feingewinde mit 12 mm Nenndurchmesser und 1,5 mm Steigung.",
+            "e": "Beim Regelgewinde würde die Steigung (z. B. 1,75) nicht extra dabeistehen."
+        }
+    ]
+}

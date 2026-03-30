@@ -1,0 +1,79 @@
+{
+    "Gewinde": [
+        {
+            "q": "Was ist der Hauptunterschied zwischen einer Schraube und einem Bolzen?",
+            "a": "Die Schraube besitzt ein Gewinde, der Bolzen meist nicht (oder nur am Ende).",
+            "e": "Schrauben werden meist gedreht, Bolzen oft gesteckt und mit Splinten gesichert."
+        },
+        {
+            "q": "Wie wird die Steigung bei einem metrischen Gewinde angegeben?",
+            "a": "In Millimeter pro Umdrehung (mm).",
+            "e": "Bei Zollgewinden wird hingegen die Anzahl der Gänge pro Zoll angegeben."
+        },
+        {
+            "q": "Was bedeutet die Bezeichnung 'M10'?",
+            "a": "Metrisches ISO-Gewinde mit 10 mm Außendurchmesser.",
+            "e": "Das 'M' steht für metrisch, die Zahl für den Nenndurchmesser."
+        },
+        {
+            "q": "Welchen Flankenwinkel besitzt ein metrisches ISO-Gewinde?",
+            "a": "60 Grad.",
+            "e": "Dieser Winkel sorgt für eine gute Selbsthemmung und Festigkeit."
+        },
+        {
+            "q": "Was ist ein Feingewinde im Vergleich zum Regelgewinde?",
+            "a": "Ein Gewinde mit kleinerer Steigung bei gleichem Durchmesser.",
+            "e": "Feingewinde haben eine höhere Selbsthemmung und werden oft in der Feinmechanik genutzt."
+        },
+        {
+            "q": "Wofür wird ein Trapezgewinde (z. B. Tr 20 x 4) meistens verwendet?",
+            "a": "Zur Übertragung von Bewegungen und Kräften.",
+            "e": "Beispiele sind Schraubstöcke oder Leitspindeln an Drehmaschinen."
+        },
+        {
+            "q": "Welchen Flankenwinkel hat ein Trapezgewinde?",
+            "a": "30 Grad.",
+            "e": "Der Winkel ist flacher als beim Spitzgewinde, um die Reibung bei Bewegung zu optimieren."
+        },
+        {
+            "q": "In welche Richtung muss eine normale Schraube gedreht werden, um sie festzuziehen?",
+            "a": "Im Uhrzeigersinn (Rechtsgewinde).",
+            "e": "Es gilt die 'Rechte-Hand-Regel': Daumen zeigt in Schraubrichtung, Finger zeigen Drehrichtung."
+        },
+        {
+            "q": "Wo findet man häufig Linksgewinde?",
+            "a": "An Gasflaschen (z. B. Propan) oder rotierenden Teilen (Fahrradpedal links).",
+            "e": "Linksgewinde dienen oft der Sicherheit, damit sich Teile durch Rotation nicht lösen."
+        },
+        {
+            "q": "Was versteht man unter der 'Selbsthemmung' bei Gewinden?",
+            "a": "Dass sich eine Schraube unter Belastung nicht von alleine dreht.",
+            "e": "Die Reibung in den Flanken verhindert das ungewollte Lösen."
+        },
+        {
+            "q": "Wie nennt man den Durchmesser am tiefsten Punkt eines Bolzengewindes?",
+            "a": "Kerndurchmesser.",
+            "e": "Der Kerndurchmesser ist entscheidend für die Festigkeit (Querschnitt) der Schraube."
+        },
+        {
+            "q": "Was ist der Unterschied zwischen einem eingängigen und einem mehrgängigen Gewinde?",
+            "a": "Ein mehrgängiges Gewinde legt bei einer Umdrehung einen größeren Weg zurück.",
+            "e": "Man erkennt es daran, dass mehrere Gewindeanfänge am Bolzenende sichtbar sind."
+        },
+        {
+            "q": "Wofür wird das Sägengewinde verwendet?",
+            "a": "Für die Übertragung hoher Kräfte in nur eine Richtung.",
+            "e": "Man findet es zum Beispiel bei Hebezeugen oder Pressen."
+        },
+        {
+            "q": "Wie wird der Kerndurchmesser für ein Innengewinde (M-Regelgewinde) grob berechnet?",
+            "a": "Nenndurchmesser minus Steigung (D - P).",
+            "e": "Beispiel M10 (Steigung 1,5): Bohrerdurchmesser = 10 - 1,5 = 8,5 mm."
+        },
+        {
+            "q": "Woran erkennt man ein Rohrgewinde (Whitworth-Gewinde)?",
+            "a": "An der Angabe in Zoll (z. B. G 1/2\") und dem Flankenwinkel von 55°.",
+            "e": "Es wird hauptsächlich in der Installationstechnik für Wasser- und Gasleitungen genutzt."
+        }
+    ]
+}

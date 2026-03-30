@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Profi Lerntrainer</title>
+    <style>
+        :root {
+            --primary: #5c67f2;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --bg: #0d111d;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f1f5f9;
+            --text-light: #94a3b8;
+            --nav-bg: rgba(13, 17, 29, 0.95);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --btn-border: rgba(255, 255, 255, 0.05);
+        }
+
+        .dark-mode {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-light: #475569;
+            --primary: #4f46e5;
+            --accent: #2563eb;
+            --success: #059669;
+            --nav-bg: rgba(248, 250, 252, 0.98);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --btn-border: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.4s ease, color 0.4s ease, opacity 0.15s ease;
+            padding-bottom: 140px;
+        }
+
+        .top-bar {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 10px;
+            min-width: 100px;
+        }
+
+        .top-bar-right {
+            min-width: 100px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #topCategory {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--success);
+            text-align: center;
+            flex: 1;
+        }
+
+        .icon-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--btn-border);
+            color: var(--text);
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .stats-dashboard {
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 20px;
+            width: 85%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid var(--btn-border);
+            box-shadow: var(--shadow);
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .stat-val {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-lbl {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        .category-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .cat-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--btn-border);
+            color: var(--text);
+            padding: 20px;
+            border-radius: 18px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: transform 0.1s;
+            -webkit-touch-callout: none;
+            /* Verhindert System-Menü am Handy bei langem Drücken */
+        }
+
+        .cat-btn:active {
+            transform: scale(0.96);
+        }
+
+        .card {
+            position: relative;
+            background: var(--card-bg);
+            border: 1px solid var(--btn-border);
+            border-radius: 32px;
+            padding: 40px 30px;
+            width: 85%;
+            max-width: 550px;
+            box-shadow: var(--shadow);
+            margin: 20px 0;
+        }
+
+        .fav-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            filter: grayscale(1);
+            transition: 0.3s;
+        }
+
+        .fav-active {
+            filter: grayscale(0);
+            transform: scale(1.2);
+        }
+
+        #questionText {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--btn-border);
+            border-radius: 20px;
+            padding: 22px;
+            margin-top: 15px;
+        }
+
+        .image-grid {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        .image-grid[data-count="1"] {
+            grid-template-columns: 1fr;
+        }
+
+        .image-grid[data-count="2"] {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .image-grid[data-count="3"] {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .q-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px;
+            cursor: zoom-in;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--btn-border);
+            transition: transform 0.2s;
+        }
+
+        .q-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            cursor: zoom-out;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-img {
+            max-width: 95%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
+
+        .modal.active .modal-img {
+            transform: scale(1);
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 40px 0 12px 0;
+            border: 1px solid var(--btn-border);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--accent), var(--primary));
+            transition: width 0.4s ease;
+        }
+
+        #progressText {
+            font-size: 0.95rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .sticky-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(25px);
+            padding: 25px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            border-top: 1px solid var(--btn-border);
+            z-index: 1000;
+        }
+
+        .btn-main {
+            flex: 1;
+            max-width: 200px;
+            border: none;
+            border-radius: 20px;
+            padding: 18px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+
+        #prevBtn {
+            background: #64748b;
+        }
+
+        #showBtn {
+            background: #6e79f2;
+        }
+
+        #nextBtn {
+            background: #4a8df6;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 1.5;
+            width: 90%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <button id="homeBtn" class="icon-btn hidden" onclick="goHome()">🏠</button>
+            <button id="backBtn" class="icon-btn hidden" onclick="handleBack()">🔙</button>
+        </div>
+        <span id="topCategory">LERNEN</span>
+        <div class="top-bar-right">
+            <button class="icon-btn" onclick="toggleMode()">🌟</button>
+        </div>
+    </div>
+
+
+    <div id="subjectScreen" class="category-container">
+        <div class="cat-btn" onclick="loadSubject('MTE')"><span>MTE</span><span>→</span></div>
+        <div class="cat-btn" onclick="loadSubject('AMA')"><span>AMA</span><span>→</span></div>
+        <div class="cat-btn" onclick="loadSubject('CTZ')"><span>CTZ</span><span>→</span></div>
+        <div class="cat-btn" onclick="loadSubject('LAÜ')"><span>LAÜ</span><span>→</span></div>
+        <div class="cat-btn" onclick="loadSubject('CNC')"><span>CNC</span><span>→</span></div>
+
+        <footer>
+            <hr style="border: 0; border-top: 1px solid var(--btn-border); margin-bottom: 20px;">
+            <div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
+                <a href="Impressum.html"
+                    style="color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 0.8rem;">
+                    Impressum
+                </a>
+                <a href="Datenschutzerklärung.html"
+                    style="color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 0.8rem;">
+                    Datenschutz
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="categoryScreen" class="category-container hidden"></div>
+
+    <div id="questionCard" class="card hidden">
+        <button id="favBtn" class="fav-toggle" onclick="toggleFavorite()">⭐</button>
+        <div id="imageGrid" class="image-grid"></div>
+        <p id="questionText"></p>
+        <div id="answerArea" class="hidden">
+            <div class="info-box">
+                <strong style="color: var(--success); font-size: 0.75rem;">LÖSUNG</strong>
+                <p id="answerText" style="font-weight: 600;"></p>
+            </div>
+            <div id="explainBox" class="info-box">
+                <strong style="color: var(--text-light); font-size: 0.75rem;">DETAILS</strong>
+                <p id="explainText" style="font-size: 0.95rem; opacity: 0.9;"></p>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <div id="progressText"></div>
+        </div>
+    </div>
+
+    <div id="stickyControls" class="sticky-nav hidden">
+        <button id="prevBtn" class="btn-main" onclick="prevQuestion()">Zurück</button>
+        <button id="showBtn" class="btn-main" onclick="showAnswer()">Lösung</button>
+        <button id="nextBtn" class="btn-main" onclick="nextQuestion()">Nächste</button>
+    </div>
+
+    <div id="lightbox" class="modal" onclick="closeLightbox()">
+        <img id="modalImg" class="modal-img" src="" alt="Zoombild">
+    </div>
+
+    <script>
+        let questions = {};
+        let currentList = [], currentIndex = 0, currentCatName = "", currentSubjectName = "";
+        let completedCategories = JSON.parse(localStorage.getItem('completed_categories') || "[]");
+        let favoriteIds = JSON.parse(localStorage.getItem('fav_questions') || "[]");
+
+        function flashConfirmation() {
+            document.body.style.opacity = "0.4";
+            setTimeout(() => document.body.style.opacity = "1", 100);
+        }
+
+        async function loadSubject(subject) {
+            try {
+                const resp = await fetch(`${subject.toLowerCase()}.json`);
+                if (!resp.ok) throw new Error();
+                questions = await resp.json();
+                currentSubjectName = subject;
+                flashConfirmation();
+                renderCategories();
+                document.getElementById('subjectScreen').classList.add('hidden');
+                document.getElementById('categoryScreen').classList.remove('hidden');
+                document.getElementById('backBtn').classList.remove('hidden');
+                document.getElementById('homeBtn').classList.remove('hidden');
+                document.getElementById('topCategory').textContent = subject;
+            } catch (err) {
+                alert(`Datei ${subject}.json wurde nicht gefunden.`);
+            }
+        }
+
+        function goHome() {
+            document.getElementById('questionCard').classList.add('hidden');
+            document.getElementById('stickyControls').classList.add('hidden');
+            document.getElementById('categoryScreen').classList.add('hidden');
+            document.getElementById('subjectScreen').classList.remove('hidden');
+            document.getElementById('backBtn').classList.add('hidden');
+            document.getElementById('homeBtn').classList.add('hidden');
+            document.getElementById('topCategory').textContent = "LERNEN";
+            flashConfirmation();
+        }
+
+        function renderCategories() {
+            const container = document.getElementById('categoryScreen');
+            container.innerHTML = "";
+
+            if (favoriteIds.length > 0) {
+                const favBtn = document.createElement('div');
+                favBtn.className = "cat-btn";
+                favBtn.style.border = "2px solid var(--primary)";
+                favBtn.style.background = "rgba(92, 103, 242, 0.1)";
+                favBtn.innerHTML = `<span>⭐ Favoriten verwalten</span><span>${favoriteIds.length}</span>`;
+
+                favBtn.onclick = () => startFavSession();
+
+                // Favoriten löschen: Langes Drücken (Handy) oder Rechtsklick
+                favBtn.oncontextmenu = (e) => {
+                    e.preventDefault();
+                    if (confirm("Alle Favoriten löschen?")) {
+                        favoriteIds = [];
+                        localStorage.setItem('fav_questions', JSON.stringify(favoriteIds));
+                        updateStats();
+                        renderCategories();
+                        flashConfirmation();
+                    }
+                };
+                container.appendChild(favBtn);
+
+                const hint = document.createElement('p');
+                hint.style = "font-size: 0.65rem; text-align: center; opacity: 0.5; margin-top: -8px; margin-bottom: 10px;";
+                hint.textContent = "(Gedrückt halten zum Löschen, PC-Rechtsklick)";
+                container.appendChild(hint);
+            }
+
+            Object.keys(questions).forEach(cat => {
+                const isDone = completedCategories.includes(`${currentSubjectName}:${cat}`);
+                const btn = document.createElement('div');
+                btn.className = "cat-btn";
+                btn.innerHTML = `<span>${cat} ${isDone ? '✅' : ''}</span><span style="opacity:0.4">→</span>`;
+                btn.onclick = () => startSession(cat);
+                container.appendChild(btn);
+            });
+        }
+
+        function startSession(cat) {
+            currentCatName = cat;
+            currentList = [...questions[cat]].sort(() => Math.random() - 0.5);
+            currentIndex = 0;
+            flashConfirmation();
+            updateUI();
+        }
+
+        function startFavSession() {
+            currentCatName = "Favoriten";
+            let allQ = [];
+            Object.values(questions).forEach(list => allQ.push(...list));
+            currentList = allQ.filter(q => favoriteIds.includes(q.q));
+            if (currentList.length === 0) return;
+            currentIndex = 0;
+            flashConfirmation();
+            updateUI();
+        }
+
+        function updateUI() {
+            document.getElementById('categoryScreen').classList.add('hidden');
+            document.getElementById('questionCard').classList.remove('hidden');
+            document.getElementById('stickyControls').classList.remove('hidden');
+            document.getElementById('topCategory').textContent = currentCatName;
+
+            const q = currentList[currentIndex];
+            document.getElementById('questionText').textContent = q.q;
+
+            const grid = document.getElementById('imageGrid');
+            grid.innerHTML = "";
+            if (q.i) {
+                const imgPaths = Array.isArray(q.i) ? q.i : [q.i];
+                grid.setAttribute('data-count', imgPaths.length);
+                imgPaths.forEach(path => {
+                    const img = document.createElement('img');
+                    img.src = path;
+                    img.className = "q-image";
+                    img.onclick = () => openLightbox(path);
+                    grid.appendChild(img);
+                });
+                grid.classList.remove('hidden');
+            } else {
+                grid.classList.add('hidden');
+            }
+
+            document.getElementById('answerText').textContent = q.a;
+            document.getElementById('explainText').textContent = q.e || "";
+            document.getElementById('explainBox').style.display = q.e ? "block" : "none";
+            document.getElementById('answerArea').classList.add('hidden');
+            document.getElementById('favBtn').classList.toggle('fav-active', favoriteIds.includes(q.q));
+
+            const total = currentList.length;
+            const current = currentIndex + 1;
+            document.getElementById('progressFill').style.width = (current / total * 100) + "%";
+            document.getElementById('progressText').textContent = `Frage ${current} / ${total}`;
+
+            if (current === total && currentCatName !== "Favoriten") {
+                const saveKey = `${currentSubjectName}:${currentCatName}`;
+                if (!completedCategories.includes(saveKey)) {
+                    completedCategories.push(saveKey);
+                    localStorage.setItem('completed_categories', JSON.stringify(completedCategories));
+                    updateStats();
+                }
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function handleBack() {
+            if (!document.getElementById('questionCard').classList.contains('hidden')) {
+                document.getElementById('questionCard').classList.add('hidden');
+                document.getElementById('stickyControls').classList.add('hidden');
+                document.getElementById('categoryScreen').classList.remove('hidden');
+                document.getElementById('topCategory').textContent = currentSubjectName;
+                renderCategories();
+            } else {
+                document.getElementById('categoryScreen').classList.add('hidden');
+                document.getElementById('subjectScreen').classList.remove('hidden');
+                document.getElementById('backBtn').classList.add('hidden');
+                document.getElementById('homeBtn').classList.add('hidden');
+                document.getElementById('topCategory').textContent = "LERNEN";
+            }
+        }
+
+        function showAnswer() { document.getElementById('answerArea').classList.remove('hidden'); }
+        function prevQuestion() { currentIndex = (currentIndex - 1 + currentList.length) % currentList.length; updateUI(); }
+        function nextQuestion() { currentIndex = (currentIndex + 1) % currentList.length; updateUI(); }
+        function toggleMode() { document.body.classList.toggle('dark-mode'); }
+
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('modalImg').src = src;
+            lb.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function updateStats() {
+            // Stats-Anzeige wurde entfernt, Funktion bleibt für Logik-Kompatibilität leer.
+        }
+
+        function toggleFavorite() {
+            const qText = currentList[currentIndex].q;
+            if (favoriteIds.includes(qText)) {
+                favoriteIds = favoriteIds.filter(id => id !== qText);
+            } else {
+                favoriteIds.push(qText);
+            }
+            localStorage.setItem('fav_questions', JSON.stringify(favoriteIds));
+            document.getElementById('favBtn').classList.toggle('fav-active');
+            updateStats();
+        }
+
+        updateStats();
+    </script>
+</body>
+
+</html>

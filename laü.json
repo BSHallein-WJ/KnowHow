@@ -1,0 +1,83 @@
+{
+    "Prüfen": [
+        {
+            "q": "Wie wird die Bügelmessschraube korrekt abgelesen?",
+            "a": "Durch Addieren des Millimeterwerts der Skalenhülse, des halben Millimeters (falls sichtbar) und des Wertes der Messtrommel.",
+            "e": "Bügelmessschrauben haben meist eine Steigung von 0,5 mm pro Umdrehung."
+        },
+        {
+            "q": "Wozu dienen Endmaße in der industriellen Fertigung?",
+            "a": "Als präzise Längenverkörperung zum Kalibrieren von Messgeräten oder zum Einstellen von Maschinen.",
+            "e": "Man kann sie durch 'Anschieben' (Adhäsion) zu größeren Maßen kombinieren."
+        },
+        {
+            "q": "Welche Prüfung wird mit einem Sinuslineal durchgeführt?",
+            "a": "Das hochpräzise Prüfen oder Einstellen von Winkeln mithilfe von Endmaßen.",
+            "e": "Die Berechnung erfolgt über die Winkelfunktion: $sin(\\alpha) = \\frac{Gegenkathete}{Hypotenuse}$."
+        },
+        {
+            "q": "Was bedeutet die Angabe 'Ra' bei Oberflächenzeichen?",
+            "a": "Der Mittenrauwert – der arithmetische Mittelwert aller Abweichungen des Profils von der Mittellinie.",
+            "e": "Je kleiner der Ra-Wert (in $\\mu m$), desto glatter ist die Oberfläche."
+        },
+        {
+            "q": "Wie wird ein Gewinde schnell auf Maßhaltigkeit geprüft, ohne es zu messen?",
+            "a": "Mit einer Gewindegrenzlehrdorn (für Innengewinde) oder einer Gewindelehrring (für Außengewinde).",
+            "e": "Die 'Gut'-Seite muss sich voll eindrehen lassen, die 'Ausschuss'-Seite darf nur maximal zwei Gänge weit greifen."
+        }
+    ],
+    "Werkstoffprüfung": [
+        {
+            "q": "Welches Eindringkörper-Material wird bei der Härteprüfung nach Rockwell (HRC) verwendet?",
+            "a": "Ein Diamantkegel mit einem Spitzenwinkel von 120°.",
+            "e": "HRC wird vor allem bei sehr harten, gehärteten Stählen angewendet."
+        },
+        {
+            "q": "Was ist das Hauptmerkmal des Zugversuchs?",
+            "a": "Die Ermittlung der Festigkeits- und Verformungskennwerte eines Werkstoffs durch langsame Dehnung.",
+            "e": "Wichtige Kennwerte sind die Streckgrenze ($R_e$) und die Zugfestigkeit ($R_m$)."
+        },
+        {
+            "q": "Wozu dient der Kerbschlagbiegeversuch?",
+            "a": "Zur Prüfung der Zähigkeit eines Werkstoffs unter schlagartiger Belastung.",
+            "e": "Gemessen wird die verbrauchte Schlagenergie in Joule (J)."
+        },
+        {
+            "q": "Wie funktioniert das Farbeindringverfahren (PT)?",
+            "a": "Farbe dringt in Oberflächenrisse ein; nach dem Reinigen zieht ein Entwickler die Farbe wieder heraus und macht den Riss sichtbar.",
+            "e": "Voraussetzung ist, dass der Fehler zur Oberfläche hin offen ist."
+        },
+        {
+            "q": "Wann wird das Magnetpulververfahren (MT) angewendet?",
+            "a": "Zum Nachweis von Rissen an oder kurz unter der Oberfläche bei ferromagnetischen Werkstoffen.",
+            "e": "Durch Magnetisierung entstehen an Fehlstellen Streuflussfelder, die das Pulver ansammeln."
+        }
+    ],
+    "Installationsschaltungen": [
+        {
+            "q": "Was ist der Unterschied zwischen einer Ausschaltung und einer Wechselschaltung?",
+            "a": "Eine Ausschaltung hat nur einen Schalter für eine Lampe; eine Wechselschaltung ermöglicht das Schalten von zwei Stellen aus.",
+            "e": "Die Wechselschaltung benötigt zwei korrespondierende Leitungen zwischen den Schaltern."
+        },
+        {
+            "q": "Wann wird eine Kreuzschaltung benötigt?",
+            "a": "Wenn eine Lichtquelle von drei oder mehr Stellen aus geschaltet werden soll.",
+            "e": "Zwischen zwei Wechselschaltern wird ein (oder mehrere) Kreuzschalter eingebaut."
+        },
+        {
+            "q": "Wie verhält sich die Spannung in einer Parallelschaltung?",
+            "a": "Die Spannung ist an allen Verbrauchern gleich groß ($U_{ges} = U_1 = U_2$).",
+            "e": "Dies ist die Standard-Schaltungsart in der Hausinstallation."
+        },
+        {
+            "q": "Was ist das typische Merkmal einer Treppenhausschaltung (Zeitschaltung)?",
+            "a": "Das Licht wird über Taster eingeschaltet und erlischt nach einer eingestellten Zeit automatisch über ein Zeitrelais.",
+            "e": "Spart Energie und verhindert, dass das Licht im Flur vergessen wird."
+        },
+        {
+            "q": "Wie berechnet man den Gesamtwiderstand in einer Serienschaltung?",
+            "a": "Durch einfaches Addieren der Einzelwiderstände ($R_{ges} = R_1 + R_2 + ...$).",
+            "e": "In der Serienschaltung fließt durch alle Bauteile derselbe Strom."
+        }
+    ]
+}

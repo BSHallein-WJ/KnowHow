@@ -1,0 +1,33 @@
+{
+    "Einheiten": [
+        {
+            "q": "Wie viele Millimeter (mm) sind 1 Meter (m)?",
+            "a": "1000 mm",
+            "e": "Umrechnungsfaktor ist 1000 (m -> dm -> cm -> mm)."
+        },
+        {
+            "q": "Was ist die Basiseinheit der Zeit in der Physik?",
+            "a": "Die Sekunde (s)",
+            "e": "Minuten und Stunden sind abgeleitete Einheiten."
+        }
+    ],
+    "Pythagoras": [
+        {
+            "q": "Wie lautet die Formel des Satz des Pythagoras?",
+            "a": "a² + b² = c²",
+            "e": "Dabei ist c immer die Hypotenuse (die längste Seite)."
+        },
+        {
+            "q": "In welchem Dreieck darf der Satz des Pythagoras angewendet werden?",
+            "a": "Nur im rechtwinkligen Dreieck.",
+            "e": "Ein Winkel muss exakt 90° betragen."
+        }
+    ],
+    "Flächenberechnung": [
+        {
+            "q": "Wie berechnet man die Fläche eines Rechtecks?",
+            "a": "Länge mal Breite (A = a * b)",
+            "e": "Das Ergebnis wird immer in Quadrateinheiten (z.B. mm²) angegeben."
+        }
+    ]
+}

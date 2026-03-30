@@ -1,0 +1,44 @@
+{
+    "CNC-Technik": [
+        {
+            "q": "Wofür steht die Abkürzung CNC?",
+            "a": "Computerized Numerical Control",
+            "e": "CNC bedeutet computergesteuerte numerische Steuerung von Werkzeugmaschinen."
+        },
+        {
+            "q": "Was ist eine Nullpunktverschiebung (G54, G55 ...)?",
+            "a": "Eine festgelegte Verschiebung des Werkstücknullpunkts.",
+            "e": "Damit kann für jedes Werkstück ein eigener Nullpunkt definiert werden, ohne das Programm zu ändern."
+        },
+        {
+            "q": "Welche Aufgabe hat der G-Code G00?",
+            "a": "Schnellverfahrbewegung (Eilgang) ohne Spanabnahme.",
+            "e": "Der Tisch oder Schlitten fährt so schnell wie möglich zur Zielposition."
+        },
+        {
+            "q": "Was beschreibt der G-Code G01?",
+            "a": "Lineare Vorschubbewegung.",
+            "e": "Bewegung erfolgt mit definiertem Vorschub – wichtig beim Fräsen und Drehen."
+        },
+        {
+            "q": "Was bedeutet 'Werkzeugkorrektur' (z. B. Radiuskorrektur)?",
+            "a": "Die automatische Anpassung der Werkzeugbahn an den realen Werkzeugdurchmesser.",
+            "e": "Dies geschieht über G41 (linke Korrektur) und G42 (rechte Korrektur)."
+        },
+        {
+            "q": "Warum wird ein CNC-Programm simuliert, bevor es an der Maschine ausgeführt wird?",
+            "a": "Um Kollisionen und Programmierfehler zu vermeiden.",
+            "e": "Simulation spart Zeit, Material und schützt die Maschine."
+        },
+        {
+            "q": "Was versteht man unter dem Begriff 'Referenzfahrt'?",
+            "a": "Das Anfahren der Maschinen-Nullpunkte.",
+            "e": "Es dient dazu, die Position der Achsen eindeutig festzulegen."
+        },
+        {
+            "q": "Was ist der Unterschied zwischen M03 und M04?",
+            "a": "M03: Spindel im Uhrzeigersinn; M04: Spindel gegen den Uhrzeigersinn.",
+            "e": "Wichtig je nach Werkzeugtyp und Drehrichtung."
+        }
+    ]
+}
