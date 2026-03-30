@@ -255,57 +255,55 @@
         }
     ],
     "Kegel & Neigungen": [
-        [
-            {
-                "q": "Welche drei Größen genügen im Allgemeinen für die eindeutige Festlegung eines Kegels?",
-                "a": "Der Durchmesser (d oder D), die Kegellänge (L) und die Kegelverjüngung (1:x).",
-                "e": "Alternativ kann statt der Verjüngung auch der Kegelwinkel alpha angegeben werden."
-            },
-            {
-                "q": "Wie wird das Symbol für die Kegelverjüngung in einer Zeichnung ausgerichtet?",
-                "a": "Die Spitze des Symbols muss immer in Richtung der Verjüngung zeigen.",
-                "e": "Das Symbol wird zusammen mit dem Wert der Verjüngung (z. B. 1:10) auf einer Bezugslinie eingetragen."
-            },
-            {
-                "q": "Was versteht man unter dem Begriff 'Kegelverjüngung'?",
-                "a": "Das Verhältnis der Durchmesserlifferenz zur Kegellänge.",
-                "e": "Die Formel lautet: C = (D - d) / L. In Zeichnungen wird dies als Verhältnis 1:x angegeben."
-            },
-            {
-                "q": "Mit welcher Linienart werden das Kegelsymbol und die dazugehörige Angabe gezeichnet?",
-                "a": "Mit einer schmalen Volllinie.",
-                "e": "Dies entspricht den allgemeinen Regeln für die Bemaßung in technischen Zeichnungen."
-            },
-            {
-                "q": "Wie werden genormte Kegel, wie zum Beispiel der Morsekegel, in Zeichnungen angegeben?",
-                "a": "Nur mit ihrer Normbezeichnung.",
-                "e": "Die genauen Maße für die Fertigung müssen in diesem Fall einem Tabellenbuch entnommen werden."
-            },
-            {
-                "q": "Was ist der Unterschied zwischen der Angabe einer Neigung und einer Kegelverjüngung?",
-                "a": "Neigungen beziehen sich auf ebene Flächen, Verjüngungen auf Rotationskörper (Kegel).",
-                "e": "Das Neigungssymbol ist ein rechtwinkliges Dreieck, das Verjüngungssymbol ein gleichschenkliges Dreieck."
-            },
-            {
-                "q": "In welchen zwei Varianten kann eine Neigung in der Zeichnung angegeben werden?",
-                "a": "Als Neigungsverhältnis (1:x) oder in Prozent (%).",
-                "e": "Auch hier muss die Spitze des Neigungssymbols in Richtung der abfallenden Fläche zeigen."
-            },
-            {
-                "q": "Wie werden Werkstückflächen mit fertigungsbedingt geringer Neigung (z. B. Gussteile) dargestellt?",
-                "a": "In der Projektion durch eine breite Volllinie.",
-                "e": "Die Lage dieser Linie wird dabei vom kleineren Maß der Neigung bestimmt."
-            },
-            {
-                "q": "Warum werden bei der Fertigung auf CNC-Maschinen meist beide Kegeldurchmesser und die Länge angegeben?",
-                "a": "Damit die Koordinaten für die Kontur direkt aus der Zeichnung entnommen werden können.",
-                "e": "Dies erspart dem Programmierer das Umrechnen der Verjüngung in absolute Maße."
-            },
-            {
-                "q": "Was gibt das Maß 'L' bei einem vollen Kegel (Spitzkegel) an?",
-                "a": "Die Entfernung der Kegelspitze zu einer festgesetzten Bezugskante.",
-                "e": "Wichtig: Dieses Maß kann bei der Fertigung oft nicht genau eingehalten werden und dient eher der theoretischen Bestimmung."
-            }
-        ]
+        {
+            "q": "Welche drei Größen genügen im Allgemeinen für die eindeutige Festlegung eines Kegels?",
+            "a": "Der Durchmesser (d oder D), die Kegellänge (L) und die Kegelverjüngung (1:x).",
+            "e": "Alternativ kann statt der Verjüngung auch der Kegelwinkel alpha angegeben werden."
+        },
+        {
+            "q": "Wie wird das Symbol für die Kegelverjüngung in einer Zeichnung ausgerichtet?",
+            "a": "Die Spitze des Symbols muss immer in Richtung der Verjüngung zeigen.",
+            "e": "Das Symbol wird zusammen mit dem Wert der Verjüngung (z. B. 1:10) auf einer Bezugslinie eingetragen."
+        },
+        {
+            "q": "Was versteht man unter dem Begriff 'Kegelverjüngung'?",
+            "a": "Das Verhältnis der Durchmesserlifferenz zur Kegellänge.",
+            "e": "Die Formel lautet: C = (D - d) / L. In Zeichnungen wird dies als Verhältnis 1:x angegeben."
+        },
+        {
+            "q": "Mit welcher Linienart werden das Kegelsymbol und die dazugehörige Angabe gezeichnet?",
+            "a": "Mit einer schmalen Volllinie.",
+            "e": "Dies entspricht den allgemeinen Regeln für die Bemaßung in technischen Zeichnungen."
+        },
+        {
+            "q": "Wie werden genormte Kegel, wie zum Beispiel der Morsekegel, in Zeichnungen angegeben?",
+            "a": "Nur mit ihrer Normbezeichnung.",
+            "e": "Die genauen Maße für die Fertigung müssen in diesem Fall einem Tabellenbuch entnommen werden."
+        },
+        {
+            "q": "Was ist der Unterschied zwischen der Angabe einer Neigung und einer Kegelverjüngung?",
+            "a": "Neigungen beziehen sich auf ebene Flächen, Verjüngungen auf Rotationskörper (Kegel).",
+            "e": "Das Neigungssymbol ist ein rechtwinkliges Dreieck, das Verjüngungssymbol ein gleichschenkliges Dreieck."
+        },
+        {
+            "q": "In welchen zwei Varianten kann eine Neigung in der Zeichnung angegeben werden?",
+            "a": "Als Neigungsverhältnis (1:x) oder in Prozent (%).",
+            "e": "Auch hier muss die Spitze des Neigungssymbols in Richtung der abfallenden Fläche zeigen."
+        },
+        {
+            "q": "Wie werden Werkstückflächen mit fertigungsbedingt geringer Neigung (z. B. Gussteile) dargestellt?",
+            "a": "In der Projektion durch eine breite Volllinie.",
+            "e": "Die Lage dieser Linie wird dabei vom kleineren Maß der Neigung bestimmt."
+        },
+        {
+            "q": "Warum werden bei der Fertigung auf CNC-Maschinen meist beide Kegeldurchmesser und die Länge angegeben?",
+            "a": "Damit die Koordinaten für die Kontur direkt aus der Zeichnung entnommen werden können.",
+            "e": "Dies erspart dem Programmierer das Umrechnen der Verjüngung in absolute Maße."
+        },
+        {
+            "q": "Was gibt das Maß 'L' bei einem vollen Kegel (Spitzkegel) an?",
+            "a": "Die Entfernung der Kegelspitze zu einer festgesetzten Bezugskante.",
+            "e": "Wichtig: Dieses Maß kann bei der Fertigung oft nicht genau eingehalten werden und dient eher der theoretischen Bestimmung."
+        }
     ]
 }
