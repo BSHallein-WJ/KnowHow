@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Profi Lerntrainer</title>
+    <title>Lern-Hilfe</title>
     <style>
         :root {
             --primary: #5c67f2;
@@ -350,7 +350,7 @@
             <button id="homeBtn" class="icon-btn hidden" onclick="goHome()">🏠</button>
             <button id="backBtn" class="icon-btn hidden" onclick="handleBack()">🔙</button>
         </div>
-        <span id="topCategory">LERNEN</span>
+        <span id="topCategory">Lern-Hilfe</span>
         <div class="top-bar-right">
             <button class="icon-btn" onclick="toggleMode()">🌟</button>
         </div>
@@ -541,7 +541,7 @@
             }
 
             document.getElementById('answerText').textContent = q.a;
-            document.getElementById('explainText').textContent = q.e || "";
+            document.getElementById('explainText').innerText = q.e || "";
             document.getElementById('explainBox').style.display = q.e ? "block" : "none";
             document.getElementById('answerArea').classList.add('hidden');
             document.getElementById('favBtn').classList.toggle('fav-active', favoriteIds.includes(q.q));

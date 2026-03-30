@@ -93,9 +93,24 @@
             "e": "Die Seitenansicht von links wird rechts neben der Vorderansicht gezeichnet."
         },
         {
+            "q": "Wie lauten die Fachbegriffe für Vorderansicht, Draufsicht und Seitenansicht?",
+            "a": "Aufriss, Grundriss und Kreuzriss.",
+            "e": "In der Projektionsmethode 1 liegt der Grundriss unter dem Aufriss und der Kreuzriss rechts daneben.\n\nHauptansicht = Aufriss\nDraufsicht = Grundriss\nKreuzriss = Seitenansicht von links"
+        },
+        {
             "q": "Was versteht man unter 'Fluchten' in der technischen Zeichnung?",
             "a": "Dass die Maße der Ansichten waagerecht und senkrecht genau übereinstimmen.",
             "e": "Punkte der Vorderansicht liegen auf einer Linie mit Punkten der Draufsicht."
+        },
+        {
+            "q": "Wo wird die Draufsicht in der Projektionsmethode 1 gezeichnet?",
+            "a": "Direkt unter der Vorderansicht.",
+            "e": "Vorderansicht und Draufsicht müssen dabei genau fluchten (senkrecht untereinander liegen)."
+        },
+        {
+            "q": "Was stellt eine schmale gestrichelte Linie in einer Projektion dar?",
+            "a": "Verdeckte Kanten und Umrisse.",
+            "e": "Das sind Kanten, die von der gewählten Blickrichtung aus nicht direkt sichtbar sind."
         }
     ],
     "Schnittdarstellungen": [
