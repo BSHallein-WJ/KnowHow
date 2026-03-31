@@ -2,415 +2,279 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Lern-Hilfe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KnoHow Lernapp</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --primary: #5c67f2;
-            --accent: #3b82f6;
-            --success: #10b981;
-            --bg: #0d111d;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --text: #f1f5f9;
-            --text-light: #94a3b8;
-            --nav-bg: rgba(13, 17, 29, 0.95);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            --btn-border: rgba(255, 255, 255, 0.05);
+        .hidden {
+            display: none !important;
         }
 
-        .dark-mode {
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #0f172a;
-            --text-light: #475569;
-            --primary: #4f46e5;
-            --accent: #2563eb;
-            --success: #059669;
-            --nav-bg: rgba(248, 250, 252, 0.98);
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --btn-border: #cbd5e1;
+        .content-area {
+            padding-bottom: 20px !important;
         }
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: background 0.4s ease, color 0.4s ease, opacity 0.15s ease;
-            padding-bottom: 140px;
+        .gateway-card .module-icon {
+            font-size: 1.8rem;
+            width: 50px;
         }
 
-        .top-bar {
+        .learning-actions {
+            pointer-events: none;
+            gap: 10px !important;
+            padding: 10px 15px 20px 15px !important;
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
+            z-index: 1000;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .top-bar-left {
-            display: flex;
-            gap: 10px;
-            min-width: 100px;
-        }
-
-        .top-bar-right {
-            min-width: 100px;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        #topCategory {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--success);
-            text-align: center;
-            flex: 1;
-        }
-
-        .icon-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--btn-border);
-            color: var(--text);
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: var(--shadow);
         }
 
-        .stats-dashboard {
-            background: var(--card-bg);
-            padding: 15px 25px;
-            border-radius: 20px;
-            width: 85%;
-            max-width: 500px;
-            margin-bottom: 20px;
-            text-align: center;
-            border: 1px solid var(--btn-border);
-            box-shadow: var(--shadow);
+        .learning-actions .btn-primary {
+            pointer-events: auto;
+            flex: 1 !important;
+            min-width: 0;
+            padding: 18px 5px !important;
+            font-size: 0.95rem !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
         }
 
-        .stats-grid {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
+        /* Nav Layout Fix */
+        .glass-nav {
+            display: grid;
+            grid-template-columns: 50px 1fr 50px;
+            align-items: center;
+            padding: 10px 15px !important;
         }
 
-        .stat-val {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .stat-lbl {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            opacity: 0.8;
-            font-weight: 600;
-        }
-
-        .category-container {
+        /* Liste untereinander für Themen */
+        #categoryGrid.gateway-grid {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            width: 90%;
-            max-width: 500px;
         }
 
-        .cat-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--btn-border);
-            color: var(--text);
-            padding: 20px;
-            border-radius: 18px;
-            font-size: 1.1rem;
-            font-weight: 700;
+        .gateway-info h3 {
+            margin: 0 !important;
+        }
+
+        .gateway-card {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: transform 0.1s;
-            -webkit-touch-callout: none;
-            /* Verhindert System-Menü am Handy bei langem Drücken */
         }
 
-        .cat-btn:active {
-            transform: scale(0.96);
+        /* Card Compact Fix */
+        .quiz-view {
+            height: auto !important;
+            min-height: unset !important;
+            margin-bottom: 100px;
+            /* Platz für die festen Buttons am Ende des Scrolls */
         }
 
-        .card {
-            position: relative;
-            background: var(--card-bg);
-            border: 1px solid var(--btn-border);
-            border-radius: 32px;
-            padding: 40px 30px;
-            width: 85%;
-            max-width: 550px;
-            box-shadow: var(--shadow);
-            margin: 20px 0;
+        /* Image Display & Zoom */
+        .question-images-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .fav-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.6rem;
-            cursor: pointer;
-            filter: grayscale(1);
-            transition: 0.3s;
-        }
-
-        .fav-active {
-            filter: grayscale(0);
-            transform: scale(1.2);
-        }
-
-        #questionText {
-            font-size: 1.4rem;
-            line-height: 1.4;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-
-        .info-box {
-            background: rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--btn-border);
-            border-radius: 20px;
-            padding: 22px;
-            margin-top: 15px;
-        }
-
-        .image-grid {
-            display: grid;
-            gap: 12px;
-            margin-bottom: 25px;
-            width: 100%;
-        }
-
-        .image-grid[data-count="1"] {
-            grid-template-columns: 1fr;
-        }
-
-        .image-grid[data-count="2"] {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .image-grid[data-count="3"] {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .q-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
+        .question-images-container img {
+            height: 150px;
+            max-width: 100%;
+            object-fit: contain;
             border-radius: 16px;
             cursor: zoom-in;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--btn-border);
-            transition: transform 0.2s;
+            transition: transform 0.3s ease;
         }
 
-        .q-image:hover {
-            transform: scale(1.02);
-        }
-
-        /* Lightbox Modal */
+        /* Fullscreen Lightbox */
         .modal {
+            display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
+            z-index: 99999;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             justify-content: center;
-            z-index: 2000;
-            cursor: zoom-out;
+            align-items: center;
             opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
+            transition: opacity 0.3s ease;
         }
 
         .modal.active {
+            display: flex;
             opacity: 1;
-            pointer-events: all;
         }
 
         .modal-img {
-            max-width: 95%;
-            max-height: 90%;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            transform: scale(0.9);
-            transition: transform 0.3s;
+            max-width: 95vw;
+            max-height: 95vh;
+            object-fit: contain;
+            border-radius: 8px;
+            cursor: zoom-out;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
         }
 
         .modal.active .modal-img {
             transform: scale(1);
         }
-
-        .progress-bar {
-            height: 10px;
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 40px 0 12px 0;
-            border: 1px solid var(--btn-border);
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(to right, var(--accent), var(--primary));
-            transition: width 0.4s ease;
-        }
-
-        #progressText {
-            font-size: 0.95rem;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .sticky-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--nav-bg);
-            backdrop-filter: blur(25px);
-            padding: 25px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            border-top: 1px solid var(--btn-border);
-            z-index: 1000;
-        }
-
-        .btn-main {
-            flex: 1;
-            max-width: 200px;
-            border: none;
-            border-radius: 20px;
-            padding: 18px;
-            font-size: 1rem;
-            font-weight: 700;
-            color: white;
-            cursor: pointer;
-        }
-
-        #prevBtn {
-            background: #64748b;
-        }
-
-        #showBtn {
-            background: #6e79f2;
-        }
-
-        #nextBtn {
-            background: #4a8df6;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 0.7rem;
-            color: var(--text-light);
-            text-align: center;
-            line-height: 1.5;
-            width: 90%;
-            max-width: 500px;
-        }
     </style>
 </head>
 
-<body>
-
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <button id="homeBtn" class="icon-btn hidden" onclick="goHome()">🏠</button>
-            <button id="backBtn" class="icon-btn hidden" onclick="handleBack()">🔙</button>
-        </div>
-        <span id="topCategory">Lern-Hilfe</span>
-        <div class="top-bar-right">
-            <button class="icon-btn" onclick="toggleMode()">🌟</button>
-        </div>
-    </div>
-
-
-    <div id="subjectScreen" class="category-container">
-        <div class="cat-btn" onclick="loadSubject('MTE')"><span>MTE</span><span>→</span></div>
-        <div class="cat-btn" onclick="loadSubject('AMA')"><span>AMA</span><span>→</span></div>
-        <div class="cat-btn" onclick="loadSubject('CTZ')"><span>CTZ</span><span>→</span></div>
-        <div class="cat-btn" onclick="loadSubject('LAÜ')"><span>LAÜ</span><span>→</span></div>
-        <div class="cat-btn" onclick="loadSubject('CNC')"><span>CNC</span><span>→</span></div>
-
-        <footer>
-            <hr style="border: 0; border-top: 1px solid var(--btn-border); margin-bottom: 20px;">
-            <div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
-                <a href="impressum.html"
-                    style="color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 0.8rem;">
-                    Impressum
-                </a>
-                <a href="datenschutz.html"
-                    style="color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 0.8rem;">
-                    Datenschutz
-                </a>
+<body data-theme="dark">
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <nav class="glass-nav">
+            <div id="nav-left">
+                <button id="homeBtn" class="nav-btn-circle hidden" onclick="goHome()" title="Home">🏠</button>
             </div>
-        </footer>
-    </div>
-
-    <div id="categoryScreen" class="category-container hidden"></div>
-
-    <div id="questionCard" class="card hidden">
-        <button id="favBtn" class="fav-toggle" onclick="toggleFavorite()">⭐</button>
-        <div id="imageGrid" class="image-grid"></div>
-        <p id="questionText"></p>
-        <div id="answerArea" class="hidden">
-            <div class="info-box">
-                <strong style="color: var(--success); font-size: 0.75rem;">LÖSUNG</strong>
-                <p id="answerText" style="font-weight: 600;"></p>
+            <h1 id="topCategory" class="accent-text"
+                style="font-size: 1.1rem; margin: 0; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                KnoHow Lernapp</h1>
+            <div id="nav-right" style="display: flex; justify-content: flex-end;">
+                <button id="themeBtn" class="nav-btn-circle" onclick="toggleTheme()" title="Thema wechseln">✨</button>
+                <button id="backBtn" class="nav-btn-circle hidden" onclick="handleBack()" title="Zurück">🔙</button>
             </div>
-            <div id="explainBox" class="info-box">
-                <strong style="color: var(--text-light); font-size: 0.75rem;">DETAILS</strong>
-                <p id="explainText" style="font-size: 0.95rem; opacity: 0.9;"></p>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content-area">
+
+            <!-- Subject Selection -->
+            <div id="subjectScreen" class="fade-in">
+                <div class="welcome-card glass-card" style="margin-bottom: 20px; padding: 25px;">
+                    <h2 style="font-size: 1.5rem; margin-bottom: 10px;">Willkommen bei <span
+                            class="accent-text">KnoHow</span></h2>
+                    <p style="font-size: 0.95rem; line-height: 1.4; color: var(--text-muted);">Wähle ein Fachgebiet, um
+                        mit dem Lernen zu beginnen.</p>
+                </div>
+
+                <div class="gateway-grid">
+                    <div class="gateway-card glass-card learning-card" onclick="loadSubject('MTE')">
+                        <div class="module-icon">⚙️</div>
+                        <div class="gateway-info">
+                            <h3>MTE/TE</h3>
+                            <p>Mechaische Technologie</p>
+                        </div>
+                    </div>
+                    <div class="gateway-card glass-card learning-card" onclick="loadSubject('AMA')">
+                        <div class="module-icon">📐</div>
+                        <div class="gateway-info">
+                            <h3>AMA</h3>
+                            <p>Angewandte Mathematik</p>
+                        </div>
+                    </div>
+                    <div class="gateway-card glass-card learning-card" onclick="loadSubject('CTZ')">
+                        <div class="module-icon">✒️</div>
+                        <div class="gateway-info">
+                            <h3>CTZ</h3>
+                            <p>Computerunterstütztes Technisches Zeichnen</p>
+                        </div>
+                    </div>
+                    <div class="gateway-card glass-card learning-card" onclick="loadSubject('LAÜ')">
+                        <div class="module-icon">💼</div>
+                        <div class="gateway-info">
+                            <h3>LAÜ</h3>
+                            <p>Laborübungen</p>
+                        </div>
+                    </div>
+                    <div class="gateway-card glass-card learning-card" onclick="loadSubject('CNC')">
+                        <div class="module-icon">🏭</div>
+                        <div class="gateway-info">
+                            <h3>CNC</h3>
+                            <p>Computerized Numerical Control</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="legal-footer">
+                    <a href="impressum.html">Impressum</a>
+                    <span class="separator">•</span>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
             </div>
+
+            <!-- Category Selection -->
+            <div id="categoryScreen" class="hidden fade-in">
+                <div class="section-title">
+                    <h3 id="categoryTitle" style="color: var(--accent-blue);">Themenbereich wählen</h3>
+                </div>
+                <div id="categoryGrid" class="gateway-grid">
+                    <!-- Categories will be injected here as vertical list -->
+                </div>
+            </div>
+
+            <!-- Question Card Area -->
+            <div id="questionCard" class="hidden fade-in">
+                <div class="glass-card quiz-view" style="padding: 20px; border-radius: 20px;">
+                    <div class="quiz-header" style="margin-bottom: 15px;">
+                        <span id="progressIndicator" class="score-badge">Frage 1 / -</span>
+                        <button id="favBtn" class="nav-btn-circle" onclick="toggleFavorite()"
+                            style="font-size: 1rem;">⭐</button>
+                    </div>
+
+                    <div class="quiz-progress-bar">
+                        <div id="progressFill" class="quiz-progress-bar-fill"></div>
+                    </div>
+
+                    <div id="imageGrid" class="image-grid" style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+                    <p id="questionText" class="quiz-question"
+                        style="font-size: 1.3rem; line-height: 1.4; color: var(--text-main);"></p>
+
+                    <div id="answerArea" class="hidden" style="margin-top: 20px;">
+                        <div class="review-item"
+                            style="border-left-color: var(--success); background: rgba(16, 185, 129, 0.05); margin-bottom: 15px; padding: 15px; border-radius: 0 12px 12px 0;">
+                            <h4
+                                style="color: var(--success); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; opacity: 0.8;">
+                                Lösung</h4>
+                            <p id="answerText"
+                                style="font-weight: 600; margin-bottom: 0; color: var(--text-main); font-size: 1.1rem;">
+                            </p>
+                        </div>
+                        <div id="explainBox" class="review-item"
+                            style="border-left-color: var(--accent-blue); background: rgba(59, 130, 246, 0.05); padding: 15px; border-radius: 0 12px 12px 0;">
+                            <h4
+                                style="color: var(--accent-blue); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; opacity: 0.8;">
+                                Details</h4>
+                            <p id="explainText"
+                                style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 0; color: var(--text-main);">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Global Actions (Fixed Bottom) -->
+        <div id="stickyControls" class="learning-actions hidden">
+            <button id="prevBtn" class="btn-primary" onclick="prevQuestion()"
+                style="background: var(--glass-bg); color: var(--text-main); border: 1px solid var(--glass-border);">
+                <span>Zurück</span>
+            </button>
+            <button id="showBtn" class="btn-primary" onclick="showAnswer()">
+                <span>Lösung</span>
+            </button>
+            <button id="nextBtn" class="btn-primary" onclick="nextQuestion()"
+                style="background: var(--accent-gradient);">
+                <span>Weiter</span>
+            </button>
         </div>
-        <div class="progress-container">
-            <div class="progress-bar">
-                <div id="progressFill" class="progress-fill"></div>
-            </div>
-            <div id="progressText"></div>
+
+        <!-- Lightbox Zoom -->
+        <div id="lightbox" class="modal" onclick="closeLightbox()">
+            <img id="modalImg" class="modal-img" src="" alt="">
         </div>
-    </div>
-
-    <div id="stickyControls" class="sticky-nav hidden">
-        <button id="prevBtn" class="btn-main" onclick="prevQuestion()">Zurück</button>
-        <button id="showBtn" class="btn-main" onclick="showAnswer()">Lösung</button>
-        <button id="nextBtn" class="btn-main" onclick="nextQuestion()">Nächste</button>
-    </div>
-
-    <div id="lightbox" class="modal" onclick="closeLightbox()">
-        <img id="modalImg" class="modal-img" src="" alt="Zoombild">
     </div>
 
     <script>
@@ -418,10 +282,21 @@
         let currentList = [], currentIndex = 0, currentCatName = "", currentSubjectName = "";
         let completedCategories = JSON.parse(localStorage.getItem('completed_categories') || "[]");
         let favoriteIds = JSON.parse(localStorage.getItem('fav_questions') || "[]");
+        const themes = ['dark', 'light', 'modern', 'ocean', 'forest', 'cyber'];
+        let currentThemeIndex = 0;
 
-        function flashConfirmation() {
-            document.body.style.opacity = "0.4";
-            setTimeout(() => document.body.style.opacity = "1", 100);
+        function toggleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            document.body.setAttribute('data-theme', themes[currentThemeIndex]);
+            localStorage.setItem('preferred_theme', themes[currentThemeIndex]);
+        }
+
+        // Theme-Initialisierung
+        const savedTheme = localStorage.getItem('preferred_theme');
+        if (savedTheme) {
+            currentThemeIndex = themes.indexOf(savedTheme);
+            if (currentThemeIndex === -1) currentThemeIndex = 0;
+            document.body.setAttribute('data-theme', themes[currentThemeIndex]);
         }
 
         async function loadSubject(subject) {
@@ -430,15 +305,20 @@
                 if (!resp.ok) throw new Error();
                 questions = await resp.json();
                 currentSubjectName = subject;
-                flashConfirmation();
                 renderCategories();
                 document.getElementById('subjectScreen').classList.add('hidden');
                 document.getElementById('categoryScreen').classList.remove('hidden');
+
+                // Button Visibility Logic
+                document.getElementById('themeBtn').classList.add('hidden');
                 document.getElementById('backBtn').classList.remove('hidden');
                 document.getElementById('homeBtn').classList.remove('hidden');
+
                 document.getElementById('topCategory').textContent = subject;
+                window.scrollTo(0, 0);
             } catch (err) {
-                alert(`Datei ${subject}.json wurde nicht gefunden.`);
+                alert(`Datei ${subject.toLowerCase()}.json wurde nicht gefunden.`);
+                console.error(err);
             }
         }
 
@@ -447,51 +327,48 @@
             document.getElementById('stickyControls').classList.add('hidden');
             document.getElementById('categoryScreen').classList.add('hidden');
             document.getElementById('subjectScreen').classList.remove('hidden');
+
+            // Button Visibility Logic
+            document.getElementById('themeBtn').classList.remove('hidden');
             document.getElementById('backBtn').classList.add('hidden');
             document.getElementById('homeBtn').classList.add('hidden');
-            document.getElementById('topCategory').textContent = "LERNEN";
-            flashConfirmation();
+
+            document.getElementById('topCategory').textContent = "KnoHow Lernapp";
+            window.scrollTo(0, 0);
         }
 
         function renderCategories() {
-            const container = document.getElementById('categoryScreen');
-            container.innerHTML = "";
+            const grid = document.getElementById('categoryGrid');
+            grid.innerHTML = "";
 
+            // Favoriten-Card
             if (favoriteIds.length > 0) {
-                const favBtn = document.createElement('div');
-                favBtn.className = "cat-btn";
-                favBtn.style.border = "2px solid var(--primary)";
-                favBtn.style.background = "rgba(92, 103, 242, 0.1)";
-                favBtn.innerHTML = `<span>⭐ Favoriten verwalten</span><span>${favoriteIds.length}</span>`;
-
-                favBtn.onclick = () => startFavSession();
-
-                // Favoriten löschen: Langes Drücken (Handy) oder Rechtsklick
-                favBtn.oncontextmenu = (e) => {
-                    e.preventDefault();
-                    if (confirm("Alle Favoriten löschen?")) {
-                        favoriteIds = [];
-                        localStorage.setItem('fav_questions', JSON.stringify(favoriteIds));
-                        updateStats();
-                        renderCategories();
-                        flashConfirmation();
-                    }
-                };
-                container.appendChild(favBtn);
-
-                const hint = document.createElement('p');
-                hint.style = "font-size: 0.65rem; text-align: center; opacity: 0.5; margin-top: -8px; margin-bottom: 10px;";
-                hint.textContent = "(Gedrückt halten zum Löschen, PC-Rechtsklick)";
-                container.appendChild(hint);
+                const favCard = document.createElement('div');
+                favCard.className = "gateway-card glass-card";
+                favCard.style.borderLeft = "4px solid var(--accent-blue)";
+                favCard.innerHTML = `
+                    <div class="module-icon">⭐</div>
+                    <div class="gateway-info">
+                        <h3>Favoriten</h3>
+                    </div>
+                    <button class="nav-btn-circle" onclick="event.stopPropagation(); clearAllFavorites();" style="width: 35px; height: 35px; font-size: 1rem; background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); color: #ef4444; margin-left: auto;" title="Alle löschen">🗑️</button>
+                `;
+                favCard.onclick = () => startFavSession();
+                grid.appendChild(favCard);
             }
 
+            // Standard-Themen (Ohne Statustext)
             Object.keys(questions).forEach(cat => {
-                const isDone = completedCategories.includes(`${currentSubjectName}:${cat}`);
-                const btn = document.createElement('div');
-                btn.className = "cat-btn";
-                btn.innerHTML = `<span>${cat} ${isDone ? '✅' : ''}</span><span style="opacity:0.4">→</span>`;
-                btn.onclick = () => startSession(cat);
-                container.appendChild(btn);
+                const card = document.createElement('div');
+                card.className = "gateway-card glass-card learning-card";
+                card.innerHTML = `
+                    <div class="module-icon">📚</div>
+                    <div class="gateway-info">
+                        <h3>${cat}</h3>
+                    </div>
+                `;
+                card.onclick = () => startSession(cat);
+                grid.appendChild(card);
             });
         }
 
@@ -499,7 +376,6 @@
             currentCatName = cat;
             currentList = [...questions[cat]].sort(() => Math.random() - 0.5);
             currentIndex = 0;
-            flashConfirmation();
             updateUI();
         }
 
@@ -510,7 +386,6 @@
             currentList = allQ.filter(q => favoriteIds.includes(q.q));
             if (currentList.length === 0) return;
             currentIndex = 0;
-            flashConfirmation();
             updateUI();
         }
 
@@ -526,37 +401,37 @@
             const grid = document.getElementById('imageGrid');
             grid.innerHTML = "";
             if (q.i) {
+                grid.className = "question-images-container";
                 const imgPaths = Array.isArray(q.i) ? q.i : [q.i];
-                grid.setAttribute('data-count', imgPaths.length);
                 imgPaths.forEach(path => {
                     const img = document.createElement('img');
                     img.src = path;
-                    img.className = "q-image";
                     img.onclick = () => openLightbox(path);
                     grid.appendChild(img);
                 });
                 grid.classList.remove('hidden');
             } else {
-                grid.classList.add('hidden');
+                grid.className = "question-images-container hidden";
             }
 
             document.getElementById('answerText').textContent = q.a;
             document.getElementById('explainText').innerText = q.e || "";
             document.getElementById('explainBox').style.display = q.e ? "block" : "none";
             document.getElementById('answerArea').classList.add('hidden');
-            document.getElementById('favBtn').classList.toggle('fav-active', favoriteIds.includes(q.q));
+
+            // UI Sync für Favoriten
+            updateFavButton();
 
             const total = currentList.length;
             const current = currentIndex + 1;
             document.getElementById('progressFill').style.width = (current / total * 100) + "%";
-            document.getElementById('progressText').textContent = `Frage ${current} / ${total}`;
+            document.getElementById('progressIndicator').textContent = `Frage ${current} / ${total}`;
 
             if (current === total && currentCatName !== "Favoriten") {
                 const saveKey = `${currentSubjectName}:${currentCatName}`;
                 if (!completedCategories.includes(saveKey)) {
                     completedCategories.push(saveKey);
                     localStorage.setItem('completed_categories', JSON.stringify(completedCategories));
-                    updateStats();
                 }
             }
             window.scrollTo(0, 0);
@@ -570,18 +445,13 @@
                 document.getElementById('topCategory').textContent = currentSubjectName;
                 renderCategories();
             } else {
-                document.getElementById('categoryScreen').classList.add('hidden');
-                document.getElementById('subjectScreen').classList.remove('hidden');
-                document.getElementById('backBtn').classList.add('hidden');
-                document.getElementById('homeBtn').classList.add('hidden');
-                document.getElementById('topCategory').textContent = "LERNEN";
+                goHome();
             }
         }
 
         function showAnswer() { document.getElementById('answerArea').classList.remove('hidden'); }
         function prevQuestion() { currentIndex = (currentIndex - 1 + currentList.length) % currentList.length; updateUI(); }
         function nextQuestion() { currentIndex = (currentIndex + 1) % currentList.length; updateUI(); }
-        function toggleMode() { document.body.classList.toggle('dark-mode'); }
 
         function openLightbox(src) {
             const lb = document.getElementById('lightbox');
@@ -593,10 +463,6 @@
             document.getElementById('lightbox').classList.remove('active');
         }
 
-        function updateStats() {
-            // Stats-Anzeige wurde entfernt, Funktion bleibt für Logik-Kompatibilität leer.
-        }
-
         function toggleFavorite() {
             const qText = currentList[currentIndex].q;
             if (favoriteIds.includes(qText)) {
@@ -605,11 +471,34 @@
                 favoriteIds.push(qText);
             }
             localStorage.setItem('fav_questions', JSON.stringify(favoriteIds));
-            document.getElementById('favBtn').classList.toggle('fav-active');
-            updateStats();
+
+            updateFavButton();
+
+            // Automatischer Rücksprung, wenn in Favoriten-Sitzung der letzte Favorit entfernt wird
+            if (currentCatName === "Favoriten" && favoriteIds.length === 0) {
+                handleBack();
+            }
         }
 
-        updateStats();
+        function updateFavButton() {
+            const q = currentList[currentIndex];
+            if (!q) return;
+            const isFav = favoriteIds.includes(q.q);
+            const btn = document.getElementById('favBtn');
+
+            btn.textContent = isFav ? "⭐" : "☆";
+            btn.style.color = isFav ? "#ffc107" : "var(--text-muted)";
+            btn.style.opacity = isFav ? "1" : "0.3";
+            btn.style.filter = isFav ? "none" : "grayscale(1)";
+        }
+
+        function clearAllFavorites() {
+            if (confirm("Wirklich alle Favoriten löschen?")) {
+                favoriteIds = [];
+                localStorage.setItem('fav_questions', JSON.stringify(favoriteIds));
+                renderCategories();
+            }
+        }
     </script>
 </body>
 
