@@ -1,4 +1,108 @@
 {
+    "Wärmebehandlung Stahl": [
+        {
+            "q": "Was ist das Ziel des Härtens von Stahl?",
+            "a": "Erhöhung der Härte und Verschleißfestigkeit.",
+            "e": "Durch schnelles Abkühlen (Abschrecken) wird ein martensitisches Gefüge erzeugt."
+        },
+        {
+            "q": "Was versteht man unter 'Anlassen'?",
+            "a": "Erwärmen des gehärteten Stahls zur Verringerung der Sprödigkeit.",
+            "e": "Anlassen nimmt dem Stahl die Glashärte und macht ihn zäher."
+        },
+        {
+            "q": "Welches Gefüge entsteht beim Abschrecken von Stahl?",
+            "a": "Martensit.",
+            "e": "Martensit ist ein sehr hartes, nadeliges und sprödes Gefüge."
+        },
+        {
+            "q": "Was ist der Unterschied zwischen Glühen und Härten?",
+            "a": "Glühen dient meist der Spannungsreduzierung oder Weichmachung, Härten der Festigkeitssteigerung.",
+            "e": "Beim Glühen wird langsam abgekühlt, beim Härten schlagartig."
+        },
+        {
+            "q": "Wozu dient das Spannungsarmglühen?",
+            "a": "Um innere Spannungen nach der Bearbeitung (z.B. Schweißen) abzubauen.",
+            "e": "Die Temperatur liegt dabei meist zwischen 550 °C und 650 °C."
+        },
+        {
+            "q": "Ab welchem Kohlenstoffgehalt ist Stahl in der Regel gut härtbar?",
+            "a": "Ab ca. 0,2 % bis 0,3 % C.",
+            "e": "Stähle mit weniger Kohlenstoff bilden beim Abschrecken kaum Martensit."
+        },
+        {
+            "q": "Was passiert beim Vergüten?",
+            "a": "Härten mit anschließendem Anlassen bei hoher Temperatur.",
+            "e": "Ziel ist eine hohe Festigkeit bei gleichzeitig hoher Zähigkeit."
+        },
+        {
+            "q": "Was ist das Ziel des Einsatzhärtens?",
+            "a": "Eine harte Randschicht bei zähem Kern.",
+            "e": "Wird oft bei Zahnrädern eingesetzt, um Verschleißschutz und Bruchfestigkeit zu kombinieren."
+        },
+        {
+            "q": "Welche Medien werden zum Abschrecken genutzt?",
+            "a": "Wasser, Öl, Luft oder Salzbäder.",
+            "e": "Wasser kühlt am schärfsten ab, Luft am sanftesten."
+        },
+        {
+            "q": "Was versteht man unter der 'Einhärtungstiefe'?",
+            "a": "Die Tiefe der gehärteten Zone unter der Werkstückoberfläche.",
+            "e": "Sie ist abhängig vom Werkstoff und dem gewählten Härteverfahren."
+        }
+    ],
+    "Sinterwerkstoffe": [
+        {
+            "q": "Wie wird das Rohmaterial für Sinterteile hergestellt?",
+            "a": "Durch Zerstäuben, Reduzieren oder Elektrolyse zu feinem Pulver.",
+            "e": "Die Pulverkörnung beeinflusst die spätere Dichte und Festigkeit."
+        },
+        {
+            "q": "Was ist 'Pressen' im Sinterprozess?",
+            "a": "Das Verdichten des Pulvers in einer Form zu einem Grünling.",
+            "e": "Der Grünling ist bereits formstabil, aber noch sehr zerbrechlich."
+        },
+        {
+            "q": "Was geschieht beim eigentlichen Sintervorgang?",
+            "a": "Erhitzen unterhalb der Schmelztemperatur, wobei sich die Pulverkörner verbinden.",
+            "e": "Durch Diffusion wachsen die Kontaktstellen der Körner zusammen."
+        },
+        {
+            "q": "Was ist ein großer Vorteil der Sintertechnik?",
+            "a": "Herstellung komplexer Formen ohne Spanen (nahezu Endkontur).",
+            "e": "Das spart Material und teure Bearbeitungszeit."
+        },
+        {
+            "q": "Was sind typische Sinterprodukte?",
+            "a": "Zahnräder, Gleitlager und Wendeschneidplatten.",
+            "e": "Besonders Hartmetalle bestehen fast immer aus Sinterwerkstoffen."
+        },
+        {
+            "q": "Was bedeutet 'Kalibrieren' nach dem Sintern?",
+            "a": "Nachpressen des fertigen Sinterteils zur Erhöhung der Maßgenauigkeit.",
+            "e": "Sinterteile schrumpfen beim Brennen, Kalibrieren gleicht das aus."
+        },
+        {
+            "q": "Warum werden Sinterlager oft in Öl getränkt?",
+            "a": "Damit sie selbstschmierend wirken (Öl in den Poren).",
+            "e": "Das Öl tritt bei Erwärmung im Betrieb aus den Kapillaren aus."
+        },
+        {
+            "q": "Was versteht man unter 'Fließen' beim Pulverpressen?",
+            "a": "Die Fähigkeit des Pulvers, sich gleichmäßig in der Form zu verteilen.",
+            "e": "Gutes Fließen verhindert unterschiedliche Dichten im Bauteil."
+        },
+        {
+            "q": "Welche Werkstoffe können gesintert werden?",
+            "a": "Metalle, Keramiken und Kunststoffe.",
+            "e": "Häufig werden Mischungen (z.B. Wolframkarbid mit Kobalt) verwendet."
+        },
+        {
+            "q": "Warum ist Sintern materialsparend?",
+            "a": "Es fällt fast kein Abfall oder Späne an (Near-Net-Shape).",
+            "e": "Das Pulver wird fast zu 100 % in die Bauteilform gepresst."
+        }
+    ],
     "Gewinde": [
         {
             "q": "Was ist der Hauptunterschied zwischen einer Schraube und einem Bolzen?",
@@ -74,6 +178,422 @@
             "q": "Woran erkennt man ein Rohrgewinde (Whitworth-Gewinde)?",
             "a": "An der Angabe in Zoll (z. B. G 1/2\") und dem Flankenwinkel von 55°.",
             "e": "Es wird hauptsächlich in der Installationstechnik für Wasser- und Gasleitungen genutzt."
+        }
+    ],
+    "Gewindefertigung": [
+        {
+            "q": "Wie wird der Durchmesser des Kernlochs für ein Innengewinde berechnet?",
+            "a": "Nenndurchmesser minus Steigung (d - P).",
+            "e": "Beispiel M10 (Steigung 1,5): Loch = 8,5 mm."
+        },
+        {
+            "q": "Was ist der Unterschied zwischen einem Gewindebohrer-Satz und einem Maschinengewindebohrer?",
+            "a": "Der Satz besteht aus drei Bohren, der Maschinengewindebohrer schneidet in einem Gang.",
+            "e": "Sätze nutzt man von Hand, um das Drehmoment besser zu kontrollieren."
+        },
+        {
+            "q": "Woran erkennt man den Vorschneider in einem dreiteiligen Gewindebohrersatz?",
+            "a": "An einem Ring am Schaft.",
+            "e": "Der Mittelschneider hat zwei Ringe, der Fertigschneider keinen oder drei."
+        },
+        {
+            "q": "Was ist Gewinderollen (Gewindewalzen)?",
+            "a": "Ein spanloses Umformverfahren zur Herstellung von Außengewinden.",
+            "e": "Gerollte Gewinde sind fester, da der Faserverlauf nicht unterbrochen wird."
+        },
+        {
+            "q": "Welche Aufgabe hat das Schneidöl beim Gewindebohren?",
+            "a": "Kühlung, Schmierung und Verminderung der Reibung.",
+            "e": "Es verhindert das Festfressen des Bohrers und schont die Schneiden."
+        },
+        {
+            "q": "Warum muss man beim Handgewindebohren den Bohrer zwischendurch zurückdrehen?",
+            "a": "Um den Span zu brechen.",
+            "e": "Lange Späne können sonst das Gewinde beschädigen oder den Bohrer abbrechen."
+        },
+        {
+            "q": "Was ist eine Schneidkluppe?",
+            "a": "Ein Werkzeug zum Schneiden von Außengewinden (meist an Rohren).",
+            "e": "Sie wird manuell mit langen Hebeln betätigt."
+        },
+        {
+            "q": "Was ist der Flankendurchmesser eines Gewindes?",
+            "a": "Das theoretische Maß zwischen Kern- und Außendurchmesser.",
+            "e": "Er ist entscheidend für die Passgenauigkeit von Bolzen und Mutter."
+        },
+        {
+            "q": "Welches Verfahren wird für sehr große oder hochpräzise Gewinde an Wellen genutzt?",
+            "a": "Gewindestrahlen oder Gewindeschleifen.",
+            "e": "Schleifen wird vor allem nach dem Härten angewandt."
+        },
+        {
+            "q": "Was bedeutet die Angabe 'M8 x 1'?",
+            "a": "Metrisches Feingewinde mit 8 mm Außendurchmesser und 1 mm Steigung.",
+            "e": "Beim Standard-Regelgewinde wird die Steigung oft weggelassen."
+        }
+    ],
+    "Schraubenverbindungen": [
+        {
+            "q": "Was ist eine Durchsteckverschraubung?",
+            "a": "Schraube geht durch beide Bauteile und wird mit einer Mutter gesichert.",
+            "e": "Beide Bauteile benötigen hierfür nur eine Durchgangsbohrung."
+        },
+        {
+            "q": "Was bedeutet die Festigkeitsklasse 8.8 auf einem Schraubenkopf?",
+            "a": "800 N/mm² Zugfestigkeit und 640 N/mm² Streckgrenze.",
+            "e": "Rechnung: 8*100 = Zugfestigkeit; 8*8*10 = Streckgrenze."
+        },
+        {
+            "q": "Warum ist das korrekte Anzugsdrehmoment wichtig?",
+            "a": "Um die nötige Vorspannkraft zu erreichen, ohne die Schraube zu plastisch zu verformen.",
+            "e": "Zu fest führt zum Abriss, zu locker zum Lösen der Verbindung."
+        },
+        {
+            "q": "Was ist eine Passschraube?",
+            "a": "Eine Schraube, deren Schaft genau in die Bohrung passt (H7/f7).",
+            "e": "Sie kann im Gegensatz zur normalen Schraube Querkräfte aufnehmen."
+        },
+        {
+            "q": "Welche Funktion hat die Unterlegscheibe?",
+            "a": "Vergrößerung der Auflagefläche zur Schonung der Werkstückoberfläche.",
+            "e": "Sie verhindert auch das Eingraben des Schraubenkopfes in weiches Material."
+        },
+        {
+            "q": "Was unterscheidet eine Dehnschraube von einer normalen Schraube?",
+            "a": "Sie hat einen verjüngten Schaft und ist elastischer.",
+            "e": "Wird oft bei Zylinderköpfen verwendet, um Temperaturschwankungen auszugleichen."
+        },
+        {
+            "q": "Was ist der Vorteil von Innensechskantschrauben (Inbus)?",
+            "a": "Geringer Platzbedarf für den Werkzeugansatz.",
+            "e": "Der Kopf kann zudem oft komplett versenkt werden."
+        },
+        {
+            "q": "Was ist eine Stiftschraube?",
+            "a": "Eine Schraube ohne Kopf mit zwei Gewindeenden.",
+            "e": "Ein Ende wird fest eingeschraubt, auf das andere kommt eine Mutter."
+        },
+        {
+            "q": "In welche Richtung werden Standardgewinde festgezogen?",
+            "a": "Im Uhrzeigersinn (Rechtsgewinde).",
+            "e": "Linksgewinde werden meist durch eine Einkerbung am Sechskant markiert."
+        },
+        {
+            "q": "Welche Belastungsart sollte bei Schrauben vermieden werden?",
+            "a": "Biegung.",
+            "e": "Schrauben sind primär für Zugbelastung ausgelegt."
+        }
+    ],
+    "Schraubensicherungen": [
+        {
+            "q": "Was ist eine Setzsicherung?",
+            "a": "Ein Element, das das Lockern durch Glätten der Oberflächenrauheit ausgleicht (z.B. Spannscheibe).",
+            "e": "Sie hält die Vorspannkraft durch Federwirkung aufrecht."
+        },
+        {
+            "q": "Wie funktioniert eine stoffschlüssige Sicherung?",
+            "a": "Durch Klebstoffe im Gewinde.",
+            "e": "Bekannte Markennamen sind zum Beispiel 'Loctite'."
+        },
+        {
+            "q": "Was ist eine Verliersicherung?",
+            "a": "Verhindert das komplette Auseinanderfallen, auch wenn die Vorspannkraft weg ist.",
+            "e": "Beispiele sind Splinte oder Sicherungsbleche."
+        },
+        {
+            "q": "Warum gelten Federringe nach DIN 127 heute als unwirksam?",
+            "a": "Ihre Federkraft ist zu gering für moderne hochfeste Schrauben (ab 8.8).",
+            "e": "Sie werden in der Industrie kaum noch für sicherheitsrelevante Teile genutzt."
+        },
+        {
+            "q": "Wie funktioniert eine selbstsichernde Mutter?",
+            "a": "Meist durch einen integrierten Kunststoffring (Polyamid).",
+            "e": "Der Ring klemmt sich plastisch in die Gewindegänge ein."
+        },
+        {
+            "q": "Was ist eine Kronenmutter?",
+            "a": "Eine Mutter mit Schlitzen, durch die ein Splint gesteckt wird.",
+            "e": "Der Splint geht durch eine Querbohrung in der Schraube."
+        },
+        {
+            "q": "Wann nutzt man Sicherungsbleche mit Lappen?",
+            "a": "Zur Sicherung von Sechskantmuttern an Gehäusekanten.",
+            "e": "Ein Lappen wird an das Bauteil, der andere an die Mutterflanke gebogen."
+        },
+        {
+            "q": "Was ist eine Sperrzahnschraube?",
+            "a": "Eine Schraube mit verzahnter Auflagefläche.",
+            "e": "Die Zähne graben sich in die Oberfläche ein und verhindern das Losdrehen."
+        },
+        {
+            "q": "Was ist Drahtsicherung?",
+            "a": "Mehrere Schrauben werden durch einen Draht so verbunden, dass sie sich gegenseitig blockieren.",
+            "e": "Häufig in der Luftfahrt oder im Rennsport zu finden."
+        },
+        {
+            "q": "Können Klebesicherungen wiederverwendet werden?",
+            "a": "Nein, sie müssen bei jeder Montage neu aufgetragen werden.",
+            "e": "Reste des alten Klebers müssen vorher gründlich entfernt werden."
+        }
+    ],
+    "Nieten": [
+        {
+            "q": "Was ist der Hauptvorteil einer Nietverbindung?",
+            "a": "Keine Gefügeänderung durch Hitze (Kaltfügen).",
+            "e": "Das Material wird nicht wie beim Schweißen geschwächt."
+        },
+        {
+            "q": "Welche Verbindungsart ist das Nieten?",
+            "a": "Formschlüssig und unlösbar.",
+            "e": "Unlösbar bedeutet, man muss das Verbindungselement zum Trennen zerstören."
+        },
+        {
+            "q": "Wie nennt man den Kopf des Niets vor der Verarbeitung?",
+            "a": "Setzkopf.",
+            "e": "Der Kopf, der beim Nieten erst entsteht, heißt Schließkopf."
+        },
+        {
+            "q": "Was ist eine Blindniete?",
+            "a": "Eine Niete, die nur von einer Seite zugänglich sein muss.",
+            "e": "Ein Dorn zieht den Nietkörper zusammen und reißt dann an einer Sollbruchstelle ab."
+        },
+        {
+            "q": "Was ist die Aufgabe des 'Döppers'?",
+            "a": "Das Formen des Schließkopfes.",
+            "e": "Er wird oft in Kombination mit einem Nietzieher verwendet."
+        },
+        {
+            "q": "Warum wird beim Warmnieten (Stahlbau) der Niet erhitzt?",
+            "a": "Damit er sich beim Abkühlen zusammenzieht und die Bleche fest aufeinanderpresst.",
+            "e": "Zudem lässt sich der glühende Stahl leichter verformen."
+        },
+        {
+            "q": "Wie wird ein Nietloch idealerweise vorbereitet?",
+            "a": "Bohren und anschließend leicht entgraten.",
+            "e": "Der Lochdurchmesser sollte ca. 0,1 bis 0,2 mm größer als der Niet sein."
+        },
+        {
+            "q": "Was ist ein Senkniet?",
+            "a": "Ein Niet, dessen Kopf bündig mit der Oberfläche abschließt.",
+            "e": "Wird oft im Flugzeugbau für eine glatte Außenhaut genutzt."
+        },
+        {
+            "q": "Was passiert, wenn der Nietschaft zu lang ist?",
+            "a": "Der Schließkopf wird zu groß oder der Schaft verbiegt sich im Loch.",
+            "e": "Die Verbindung wird dadurch instabil oder unsauber."
+        },
+        {
+            "q": "Welche Werkstoffe werden für Nieten verwendet?",
+            "a": "Stahl, Kupfer, Aluminium oder Messing.",
+            "e": "Die Nietwerkstoffe sollten meist dem Bauteilwerkstoff entsprechen (Kontaktkorrosion)."
+        }
+    ],
+    "Stifte": [
+        {
+            "q": "Wozu dienen Stifte primär?",
+            "a": "Zum Positionieren (Fixieren) oder Sichern von Bauteilen.",
+            "e": "Sie nehmen oft die genaue Lagebestimmung vor, während Schrauben die Kraft halten."
+        },
+        {
+            "q": "Was ist ein Zylinderstift?",
+            "a": "Ein glatter, zylindrischer Stift mit präzisem Durchmesser.",
+            "e": "Häufige Passungsklasse ist m6 für festen Sitz."
+        },
+        {
+            "q": "Was ist der Vorteil eines Kegelstiftes?",
+            "a": "Er ist spielfrei und lässt sich leicht wieder lösen.",
+            "e": "Durch die Kegelform zieht er sich beim Eintreiben immer fest."
+        },
+        {
+            "q": "Warum haben manche Zylinderstifte ein Innengewinde?",
+            "a": "Damit man sie aus Sacklöchern leichter herausziehen kann.",
+            "e": "Man schraubt einen Abzieher ein, um den Stift zu lösen."
+        },
+        {
+            "q": "Was ist ein Kerbstift?",
+            "a": "Ein Stift mit eingepressten Längskerben.",
+            "e": "Die Kerben verformen sich beim Einschlagen elastisch und klemmen den Stift fest."
+        },
+        {
+            "q": "Was ist ein Spannstift (Spannhülse)?",
+            "a": "Ein geschlitzter, hohler Federstahlstift.",
+            "e": "Er ist sehr günstig und benötigt keine hochpräzise Bohrung."
+        },
+        {
+            "q": "Wie werden Stiftlöcher für Zylinderstifte meist gefertigt?",
+            "a": "Bohren und anschließend Reiben.",
+            "e": "Nur durch Reiben wird die notwendige Maßhaltigkeit erreicht."
+        },
+        {
+            "q": "Was ist ein Abscherstift?",
+            "a": "Ein Stift, der als Sollbruchstelle dient, um Maschinen vor Überlastung zu schützen.",
+            "e": "Er bricht bei einer definierten Kraft durch."
+        },
+        {
+            "q": "In welcher Einheit wird die Kegelneigung bei Kegelstiften meist angegeben?",
+            "a": "1:50.",
+            "e": "Das bedeutet, auf 50 mm Länge ändert sich der Durchmesser um 1 mm."
+        },
+        {
+            "q": "Dürfen Passstifte zur Kraftübertragung (Drehmoment) genutzt werden?",
+            "a": "Nur in begrenztem Maße, meist dienen sie nur der Lagefixierung.",
+            "e": "Für hohe Drehmomente sind Passfedern besser geeignet."
+        }
+    ],
+    "Achsen & Wellen": [
+        {
+            "q": "Was ist der Hauptunterschied zwischen einer Achse und einer Welle?",
+            "a": "Wellen übertragen Drehmomente, Achsen tragen nur Lasten.",
+            "e": "Wellen rotieren fast immer, Achsen können feststehen oder mitlaufen."
+        },
+        {
+            "q": "Welche Belastung tritt bei einer feststehenden Achse hauptsächlich auf?",
+            "a": "Biegung.",
+            "e": "Da sie kein Drehmoment überträgt, entfällt die Torsion."
+        },
+        {
+            "q": "Welche Belastung tritt bei einer Welle zusätzlich zur Biegung auf?",
+            "a": "Torsion (Verdrehung).",
+            "e": "Das übertragene Drehmoment verursacht diese Verdrehspannung."
+        },
+        {
+            "q": "Was ist eine Hohlwelle?",
+            "a": "Eine Welle mit einer Bohrung in der Mitte.",
+            "e": "Sie ist bei fast gleicher Festigkeit deutlich leichter als eine Vollwelle."
+        },
+        {
+            "q": "Was ist eine Kurbelwelle?",
+            "a": "Eine Welle, die lineare Bewegungen in Drehbewegungen umwandelt.",
+            "e": "Bekanntestes Beispiel ist der Verbrennungsmotor."
+        },
+        {
+            "q": "Wozu dienen Wellenabsätze?",
+            "a": "Zur axialen Fixierung von Lagern oder Zahnrädern.",
+            "e": "Gleichzeitig dienen sie als Anschlag bei der Montage."
+        },
+        {
+            "q": "Was ist ein 'Wellenzapfen'?",
+            "a": "Das Ende einer Welle, das im Lager liegt.",
+            "e": "Man unterscheidet Stirnzapfen, Halszapfen und Kugelzapfen."
+        },
+        {
+            "q": "Warum sollten Wellen an Querschnittsübergängen gerundet sein?",
+            "a": "Zur Vermeidung von Kerbwirkung.",
+            "e": "Scharfe Kanten führen unter Belastung schnell zu Dauerbrüchen."
+        },
+        {
+            "q": "Was ist eine Gelenkwelle?",
+            "a": "Eine Welle, die Drehmomente zwischen nicht fluchtenden Bauteilen überträgt.",
+            "e": "Sie besitzt Kreuz- oder Gleichlaufgelenke (z.B. Antriebswelle beim Auto)."
+        },
+        {
+            "q": "Welcher Werkstoff wird häufig für Wellen verwendet?",
+            "a": "Vergütungsstahl (z.B. E335 oder 42CrMo4).",
+            "e": "Die Wahl hängt von der erforderlichen Festigkeit und Zähigkeit ab."
+        }
+    ],
+    "Lager": [
+        {
+            "q": "Welche zwei Grundarten von Lagern gibt es?",
+            "a": "Wälzlager und Gleitlager.",
+            "e": "Wälzlager nutzen Rollkörper, Gleitlager eine Gleitschicht."
+        },
+        {
+            "q": "Was ist ein Radiallager?",
+            "a": "Ein Lager für Kräfte, die senkrecht zur Welle wirken.",
+            "e": "Das klassische Rillenkugellager ist primär ein Radiallager."
+        },
+        {
+            "q": "Was ist ein Axiallager?",
+            "a": "Ein Lager für Kräfte in Richtung der Wellenachse.",
+            "e": "Wird oft auch als Drucklager bezeichnet."
+        },
+        {
+            "q": "Nenne drei Formen von Wälzkörpern.",
+            "a": "Kugeln, Zylinder, Nadeln (oder Kegel/Tonnen).",
+            "e": "Die Form bestimmt die Tragfähigkeit und die maximalen Drehzahlen."
+        },
+        {
+            "q": "Was ist der Vorteil von Gleitlagern gegenüber Wälzkörpern?",
+            "a": "Sie sind unempfindlicher gegen Stöße und oft geräuschärmer.",
+            "e": "Zudem sind sie bei sehr hohen Drehzahlen (hydrodynamisch) langlebiger."
+        },
+        {
+            "q": "Was bedeutet 'hydrodynamische Schmierung'?",
+            "a": "Der Schmierfilm baut sich durch die Drehung der Welle selbst auf.",
+            "e": "Ab einer gewissen Drehzahl schwimmt die Welle berührungslos auf dem Öl."
+        },
+        {
+            "q": "Was ist ein Pendelkugellager?",
+            "a": "Ein Lager, das Schrägstellungen der Welle ausgleichen kann.",
+            "e": "Der Innenring kann innerhalb des Außenrings schwenken."
+        },
+        {
+            "q": "Warum müssen Wälzlager oft abgedichtet sein?",
+            "a": "Um Schmutz fernzuhalten und das Fett im Lager zu halten.",
+            "e": "Man erkennt dies an Kürzeln wie RS oder Z in der Lagerbezeichnung."
+        },
+        {
+            "q": "Was ist die Lagerluft?",
+            "a": "Das Spiel zwischen Wälzkörpern und Laufbahnen im unverbauten Zustand.",
+            "e": "Sie verringert sich beim Einpressen des Lagers."
+        },
+        {
+            "q": "Aus welchem Werkstoff bestehen Wälzlager meist?",
+            "a": "Chrom-legierter Wälzlagerstahl (z.B. 100Cr6).",
+            "e": "Dieser ist extrem hart und verschleißfest."
+        }
+    ],
+    "Führungen": [
+        {
+            "q": "Was ist die Aufgabe einer Führung?",
+            "a": "Die zwangsläufige Bewegung eines Bauteils in eine bestimmte Richtung.",
+            "e": "Sie verhindert Bewegungen in alle anderen Richtungen."
+        },
+        {
+            "q": "Welche zwei Arten von Reibung unterscheidet man bei Führungen?",
+            "a": "Gleitreibung und Wälzreibung.",
+            "e": "Wälzführungen haben einen geringeren Anlaufwiderstand (kein Stick-Slip)."
+        },
+        {
+            "q": "Was ist eine Schwalbenschwanzführung?",
+            "a": "Eine formschlüssige Gleitführung mit trapezförmigem Querschnitt.",
+            "e": "Sie kann Kräfte in mehrere Richtungen aufnehmen und ist nachstellbar."
+        },
+        {
+            "q": "Was versteht man unter dem 'Stick-Slip-Effekt'?",
+            "a": "Das Ruckgleiten bei niedrigen Geschwindigkeiten durch den Wechsel von Haft- zu Gleitreibung.",
+            "e": "Tritt vor allem bei ungenügend geschmierten Gleitführungen auf."
+        },
+        {
+            "q": "Wozu dienen Keilleisten in Führungen?",
+            "a": "Zum Einstellen des Führungsspiels.",
+            "e": "Durch Verschieben des Keils wird die Führung enger oder weiter."
+        },
+        {
+            "q": "Was ist eine Profilschienenführung?",
+            "a": "Eine Wälzführung, bei der Wagen auf einer profilierten Schiene laufen.",
+            "e": "Sie sind sehr präzise und haben eine hohe Tragfähigkeit."
+        },
+        {
+            "q": "Warum werden Führungsbahnen oft gehärtet und geschliffen?",
+            "a": "Zur Verringerung des Verschleißes und Erhöhung der Genauigkeit.",
+            "e": "Oft wird hierfür das Induktionshärten verwendet."
+        },
+        {
+            "q": "Was ist eine hydrostatische Führung?",
+            "a": "Eine Führung, bei der Öl mit hohem Druck zwischen die Flächen gepumpt wird.",
+            "e": "Es gibt keine metallische Berührung, selbst im Stillstand nicht."
+        },
+        {
+            "q": "Wozu dienen Abstreifer an Führungen?",
+            "a": "Um Späne und Schmutz von den Laufbahnen fernzuhalten.",
+            "e": "Sie schützen die empfindlichen Oberflächen vor Zerstörung."
+        },
+        {
+            "q": "Was ist eine Rundführung?",
+            "a": "Eine Führung, die auf runden Wellen (meist mit Kugelbüchsen) basiert.",
+            "e": "Sie ist kostengünstig und einfach zu montieren."
         }
     ]
 }

@@ -1,35 +1,10 @@
 {
     "Blattformate und Linien": [
         {
-            "q": "Was ist auf diesem Bild zu sehen?",
-            "a": "Eine Vorderansicht im Längsschnitt.",
-            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
-            "i": "Media/ctz/bild1.png"
-        },
-        {
-            "q": "Was ist auf diesem Bild zu sehen?",
-            "a": "Eine Vorderansicht im Längsschnitt.",
-            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
-            "i": "Media/ctz/bild1.png"
-        },
-        {
-            "q": "Was ist auf diesem Bild zu sehen?",
-            "a": "Eine Vorderansicht im Längsschnitt.",
-            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
-            "i": [
-                "Media/ctz/bild1.png",
-                "Media/ctz/Kontingent.png"
-            ]
-        },
-        {
-            "q": "Was ist auf diesem Bild zu sehen?",
-            "a": "Eine Vorderansicht im Längsschnitt.",
-            "e": "Die Schraffur deutet auf die Schnittfläche hin.",
-            "i": [
-                "Media/ctz/bild1.png",
-                "Media/ctz/browser.png",
-                "Media/ctz/Kontingent.png"
-            ]
+            "q": "Wie groß sind die Blattränder eines DIN A4 Bogens?",
+            "a": "Heftrand 20 mm, alle übrigen Ränder 5 mm",
+            "e": "Blattränder sind auf jedem Format gleich groß (20mm und 3x 5mm).",
+            "i": "Media/ctz/Blattrand_1.png"
         },
         {
             "q": "Welches Seitenverhältnis haben alle normierten DIN-Blattformate?",
@@ -93,6 +68,12 @@
             "e": "Die Seitenansicht von links wird rechts neben der Vorderansicht gezeichnet."
         },
         {
+            "q": "Was bedeutet das Symbol im Schriftkopf einer Zeichnung?",
+            "a": "Es gibt die Projektionsmethode an (meist Methode 1).",
+            "e": "Das Symbol stellt einen Kegelstumpf dar und zeigt, von welcher Seite die Ansicht projiziert wird.",
+            "i": "Media/ctz/Projekttionskegel_0.png"
+        },
+        {
             "q": "Wie lauten die Fachbegriffe für Vorderansicht, Draufsicht und Seitenansicht?",
             "a": "Aufriss, Grundriss und Kreuzriss.",
             "e": "In der Projektionsmethode 1 liegt der Grundriss unter dem Aufriss und der Kreuzriss rechts daneben.\n\nHauptansicht = Aufriss\nDraufsicht = Grundriss\nKreuzriss = Seitenansicht von links"
@@ -132,6 +113,12 @@
     ],
     "Gewindedarstellung": [
         {
+            "q": "Was ist auf dem Bild fehlerhaft?",
+            "a": "Der Kernloch-Ø ist bemaßt = FEHLER",
+            "e": "Die Ø von Kernlochbohrungen werden in der Regel nicht bemaßt.",
+            "i": "Media/ctz/Gewindefehler1.png"
+        },
+        {
             "q": "Wie wird der Außendurchmesser einer Schraube (Bolzengewinde) dargestellt?",
             "a": "Mit einer breiten Volllinie.",
             "e": "Der Kerndurchmesser wird hingegen als schmale Volllinie gezeichnet."
@@ -140,6 +127,16 @@
             "q": "Wie stellt man ein Innengewinde in der Seitenansicht (Kreisdarstellung) dar?",
             "a": "Außenkreis als schmale Volllinie (3/4 Kreis), Innenkreis als breite Volllinie.",
             "e": "Der 3/4 Kreis zeigt den Nenndurchmesser des Gewindes."
+        },
+        {
+            "q": "Welche dieser Gewindeverbindungen ist korrekt dargestellt/bemaßt?",
+            "a": "Gewindedarstellung 1",
+            "e": "Es sollte nach Möglichkeit die Bemaßungsvariante 1 gewählt werden. \nBemaßungsvariante 2 ist CNC-gerecht aber problematisch beim Nachmessen der Tiefe. \n Bemaßungsvariante 3 ist falsch, da die Kernbohrung als M10 bemaßt ist.",
+            "i": [
+                "Media/ctz/Grundlochgewinde_1.png",
+                "Media/ctz/Grundlochgewinde_2.png",
+                "Media/ctz/Grundlochgewinde_3.png"
+            ]
         },
         {
             "q": "Bis wohin wird die Schraffur bei einer Gewindebohrung (Schnitt) gezeichnet?",
